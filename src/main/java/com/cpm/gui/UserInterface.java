@@ -192,8 +192,8 @@ public abstract class UserInterface extends JFrame implements ActionListener {
         this.tNumber = createTextField(panel, "", 15, 130, 30, 50, 23, color(255, 255, 255), true);
         this.tAccuracy = createTextField(panel, "", 15, 130, 80, 50, 23, color(255, 255, 255), true);
 
-        this.checkOnTop = createCheckBox(panel, "- always on top.", 15, Font.BOLD, mainFrame.isAlwaysOnTop(), 10, 110, 150, 20);
-        this.checkAutoSave = createCheckBox(panel, "- auto save data on exit.", 15, Font.BOLD, parameters.isAutoSave(), 10, 130, 200, 20);
+        this.checkOnTop = createCheckBox(panel, "- always on top.", 15, Font.BOLD, this.mainFrame.isAlwaysOnTop(), 10, 110, 150, 20);
+        this.checkAutoSave = createCheckBox(panel, "- auto save data on exit.", 15, Font.BOLD, this.parameters.isAutoSave(), 10, 130, 200, 20);
 
         this.bOk = createButton(panel, "OK", 14, null, 140, heightP - 60, 60, 28, true);
         this.bCancel = createButton(panel, "Cancel", 14, null, 205, heightP - 60, 80, 28, true);
