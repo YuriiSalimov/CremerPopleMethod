@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import static com.cpm.parameters.Constant.*;
 import static java.lang.Math.*;
 
 public final class Conformation {
@@ -310,8 +311,9 @@ public final class Conformation {
     @Override
     public String toString() {
         final SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy  hh:mm:ss a");
-        final StringBuilder sb = new StringBuilder("Yu. A. Salimov, Yu. G. Vlasenko, CPM v.1\r\n");
-        sb.append("\r\n       Cremer-Pople Method\r\n")
+        final StringBuilder sb = new StringBuilder("Yu. A. Salimov, CPM v.2.0\r\n");
+        sb.append(AUTHOR_NAMES).append(", ").append(PROG_NAME).append(" ").append(VERSION).append("\r\n")
+                .append("\r\n       ").append(METHOD_NAME).append("\r\n")
                 .append("\r\nDate: ").append(dateFormat.format(new Date()))
                 .append("\r\n\r\nThe number of members in the cycle = ").append(this.number)
                 .append("\r\nThe order of accuracy in calculations = ").append(this.accuracy)

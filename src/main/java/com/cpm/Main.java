@@ -36,9 +36,6 @@ public class Main {
         } catch (InterruptedException ex) {
             ex.printStackTrace();
         }
-        final Conformation conformation = new Conformation();
-        final Program program = new Program(conformation);
-        final Thread th = new Thread(program);
-        th.start();
+        new Thread(new Program(new Conformation())).start();
     }
 }
