@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.cpm</groupId>
-    <artifactId>cremer-pople-method</artifactId>
+    <artifactId>CPM</artifactId>
     <version>2.0</version>
     <packaging>jar</packaging>
     <name>Cremer-Pople Method</name>
