@@ -243,7 +243,7 @@ public final class Program extends UserInterface implements Runnable, ActionList
     }
 
     private void openManual() {
-        int check = Files.open(Constant.FILE_MANUAL);
+        final int check = Files.open(Constant.FILE_MANUAL);
         if (check != 0) {
             showMessage(check, Constant.FILE_MANUAL);
         }

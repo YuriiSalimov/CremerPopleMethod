@@ -151,13 +151,13 @@ public abstract class UserInterface extends JFrame implements ActionListener {
     }
 
     protected void createMenuBar() {
-        JMenuBar menuBar = new JMenuBar();
+        final JMenuBar menuBar = new JMenuBar();
         menuBar.setBounds(0, 0, this.width, 20);
 
-        JMenu mFile = createMenu(menuBar, "File", 12);
-        JMenu mEdit = createMenu(menuBar, "Edit", 12);
-        JMenu mSettings = createMenu(menuBar, "Settings", 12);
-        JMenu mHelp = createMenu(menuBar, "Help", 12);
+        final JMenu mFile = createMenu(menuBar, "File", 12);
+        final JMenu mEdit = createMenu(menuBar, "Edit", 12);
+        final JMenu mSettings = createMenu(menuBar, "Settings", 12);
+        final JMenu mHelp = createMenu(menuBar, "Help", 12);
 
         this.miOpen = createMenuItem(mFile, "Open", new ImageIcon(Program.class.getResource("/javax/swing/plaf/metal/icons/ocean/file.gif")), KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
         this.miOpen.setEnabled(this.bOpen.isEnabled());
