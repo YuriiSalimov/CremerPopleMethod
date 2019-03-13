@@ -37,6 +37,8 @@ public final class Constant {
             + "Non-commercial use.\n"
             + "You agree?\n";
 
+    public static final String DATE_PATTERN = "dd.MM.yyyy  hh:mm:ss a";
+
     private Constant() {
     }
 }

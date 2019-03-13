@@ -1,10 +1,9 @@
 package com.cpm;
 
-import com.cpm.prog.Conformation;
-import com.cpm.prog.Program;
 import com.cpm.parameters.Constant;
 import com.cpm.parameters.ParametersSystem;
-import com.cpm.prog.License;
+import com.cpm.prog.Conformation;
+import com.cpm.prog.Program;
 
 import javax.swing.*;
 
@@ -26,7 +25,7 @@ public class Main {
 
     private static void newApplication() {
         ParametersSystem.setFileName(Constant.FILE_SYSTEM);
-        final ParametersSystem parameters = ParametersSystem.getInstance();
+        /*final ParametersSystem parameters = ParametersSystem.getInstance();
         try {
             if (!parameters.isLicense()) {
                 final Thread thread = new Thread(new License());
@@ -35,7 +34,7 @@ public class Main {
             }
         } catch (InterruptedException ex) {
             ex.printStackTrace();
-        }
+        }*/
         new Thread(new Program(new Conformation())).start();
     }
 }

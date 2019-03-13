@@ -268,7 +268,7 @@ public abstract class UserInterface extends JFrame implements ActionListener {
         }
     }
 
-    private static JFrame createFrame(
+    private JFrame createFrame(
             final JPanel panel,
             final String text,
             final Image image,
@@ -291,7 +291,7 @@ public abstract class UserInterface extends JFrame implements ActionListener {
         return frame;
     }
 
-    private static JPanel createPanel() {
+    private JPanel createPanel() {
         final JPanel panel = new JPanel();
         panel.setBackground(color(230, 230, 230));
         panel.setLayout(null);
@@ -299,7 +299,7 @@ public abstract class UserInterface extends JFrame implements ActionListener {
         return panel;
     }
 
-    private static void createLabel(
+    private void createLabel(
             final JPanel panel,
             final String name,
             final int fontSize,
@@ -316,7 +316,7 @@ public abstract class UserInterface extends JFrame implements ActionListener {
         panel.add(label);
     }
 
-    private static JTextField createTextField(
+    private JTextField createTextField(
             final JPanel panel,
             final String text,
             final int fontSize,
@@ -385,7 +385,7 @@ public abstract class UserInterface extends JFrame implements ActionListener {
         return item;
     }
 
-    private static JCheckBox createCheckBox(
+    private JCheckBox createCheckBox(
             final JPanel panel,
             final String text,
             final int fontSize,
@@ -405,11 +405,11 @@ public abstract class UserInterface extends JFrame implements ActionListener {
         return checkBox;
     }
 
-    public static Font font(final int FontSize, final int option) {
-        return new Font(Constant.FONT_NAME, option, FontSize);
+    private Font font(final int fontSize, final int option) {
+        return new Font(Constant.FONT_NAME, option, fontSize);
     }
 
-    public static Color color(final int red, final int green, final int blue) {
+    private Color color(final int red, final int green, final int blue) {
         return new Color(red, green, blue);
     }
 }

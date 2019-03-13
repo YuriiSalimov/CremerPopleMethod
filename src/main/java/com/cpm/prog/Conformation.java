@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static com.cpm.parameters.Constant.*;
 import static java.lang.Math.*;
 
 public final class Conformation {
@@ -310,11 +309,11 @@ public final class Conformation {
 
     @Override
     public String toString() {
-        final SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy  hh:mm:ss a");
-        final StringBuilder sb = new StringBuilder("Yu. A. Salimov, CPM v.2.0\r\n");
-        sb.append(AUTHOR_NAMES).append(", ").append(PROG_NAME).append(" ").append(VERSION).append("\r\n")
-                .append("\r\n       ").append(METHOD_NAME).append("\r\n")
-                .append("\r\nDate: ").append(dateFormat.format(new Date()))
+        final StringBuilder sb = new StringBuilder();
+        sb.append(Constant.AUTHOR_NAMES).append(", ")
+                .append(Constant.PROG_NAME).append(" ").append(Constant.VERSION).append("\r\n")
+                .append("\r\n       ").append(Constant.METHOD_NAME).append("\r\n")
+                .append("\r\nDate: ").append(new SimpleDateFormat(Constant.DATE_PATTERN).format(new Date()))
                 .append("\r\n\r\nThe number of members in the cycle = ").append(this.number)
                 .append("\r\nThe order of accuracy in calculations = ").append(this.accuracy)
                 .append("\r\n\r\nTorsion angles (d):")
